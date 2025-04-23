@@ -2,7 +2,7 @@
 
 class FootballApiClient {
     private $baseUrl = 'http://api.football-data.org/v4';
-    private $apiKey = '9b7b23b0197b422a9321aa2e1a6dd066';
+    private $apiKey = '';
     private $leagueCode;
     private $season = 2024;
     private $standingsCache = null;
