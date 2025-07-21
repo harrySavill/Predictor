@@ -1,0 +1,632 @@
+:root {
+    --deep-blue: #1a2d42;
+    --blue: #2e4156;
+    --pale-gray: #aab7b7;
+    --gray: #c0c8ca;
+    --offwhite: #eaecef;
+    --white: #ffffff;
+    --accent: #ffcc00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--offwhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 8vh;
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1em;
+    position: absolute;
+    top:0;
+}
+.header-links-form{
+    width: fit-content;
+    padding: 0;
+}
+.header-links{
+    display: flex;
+    list-style: none;
+}
+
+.header-link{
+    color: var(--accent);
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    height: 8dvh;
+    padding: 0 1.4em;
+    font-size: 1.1em;
+    font-weight: 550;
+}
+
+.header-link:hover{
+    background-color: var(--deep-blue);
+    cursor: pointer;
+    color: #ffffff;
+}
+
+h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+main {
+    margin-top: 8vh;
+    height: 92vh;
+    display: flex;
+}
+
+.login-main, .register-main{
+    align-items: center;
+}
+
+.logo{
+    max-height:100%
+}
+
+form {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+.text-div {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.form-header {
+    color: var(--deep-blue);
+    font-size: 2em;
+}
+
+.form-desc {
+    color: var(--blue);
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px;
+    margin: 8px 0;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--blue);
+    font-size: 1.2em;
+}
+
+
+.input-container input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0px 0px 5px rgba(255, 204, 0, 0.5);
+}
+
+.input-container input::placeholder {
+    color: var(--pale-gray);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--deep-blue);
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: darkgoldenrod;
+}
+
+.red-btn{
+    background-color: red;
+    color: white;
+}
+
+.red-btn:hover{
+    background-color: darkred;
+}
+
+.register-link{
+    padding-top: 1em;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.create-match-main{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.create-gameweek-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.pre-form-header{
+    margin-top: 0;
+    margin-bottom: 0.6em;
+}
+
+.fixtures-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.fixture {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 10px;
+}
+
+.team-select {
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    background-color: var(--white);
+    width: 200px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+    outline: none;
+}
+
+.create-gameweek-form label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.create-gameweek-form input[type="number"] {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    width: 60px;
+    margin-bottom: 1em;
+}
+
+.create-gameweek-form input[type="number"]:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+
+.update-scores-main {
+    margin-top: 8vh;
+    height: 92vh;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+}
+
+.update-scores-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.update-scores-form, .update-predictions-form {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.update-predictions-form, .update-scores-form{
+    background-color: var(--white);
+}
+#matches-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: var(--offwhite);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--gray);
+}
+
+.team-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--blue);
+    width: 300px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.score-input {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    width: 70px;
+    text-align: center;
+    background-color: var(--white);
+    max-height: 100%;
+}
+
+.score-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 6px rgba(255, 204, 0, 0.5);
+    outline: none;
+}
+
+.score-input::placeholder {
+    color: var(--pale-gray);
+    font-weight: 400;
+}
+
+.vs {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--pale-gray);
+    padding: 0 5px;
+}
+
+
+
+
+
+.admin-grid-container{
+    width: 60%;
+    margin-top: 8vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.admin-form{
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.results-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    min-height: calc(100vh - 8vh);
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.results-h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.results-match-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.results-match-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.results-team {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.results-score {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.green {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.orange {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.red {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.results-points {
+    font-size: 1.1em;
+    color: #0052cc;
+    font-weight: bold;
+}
+
+.results-prediction-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.results-prediction-row:first-child {
+    border-top: none;
+}
+
+.results-label {
+    font-weight: 500;
+    color: #555;
+}
+
+
+.leagues-main {
+    margin-top: 8vh;
+    max-width: 100%;
+    display: flex;
+}
+
+.leagues-left-menu{
+    margin-right: 10dvw;
+    margin-top: 4em;
+
+}
+
+.leagues-left-header{
+    font-size: 2.5em;
+    color: var(--blue);
+    margin-bottom: 1em;
+}
+
+.leagues-menu-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.league-menu-button{
+    background-color: white;
+    border: 1px solid var(--pale-gray);
+    border-radius: 1em;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.league-menu-button:hover, .league:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+}
+
+.leagues-center{
+    padding: 0 3vw;
+
+}
+
+.leagues-center-header{
+    font-size: 2.5em;
+    color: var(--blue);
+    white-space: nowrap;
+    margin-bottom: 0.8em;
+}
+.leagues-container-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.league{
+    background-color: white;
+    border-radius: 1em;
+    padding: 2em;
+    border: 1px solid var(--pale-gray);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    min-width: 55vw;
+}
+
+.league-name{
+    font-weight: bold;
+    min-width: 8vw;
+    max-width: 8vw;
+    white-space: nowrap;
+
+}
+
+.league-type{
+    padding: 0 1em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.classic-league{
+    background-color: var(--pale-gray);
+}
+
+.custom-league{
+    background-color: var(--accent);
+}
+
+.league-position-div{
+    display: flex;
+    margin-left: 2em;
+    gap: 0.3em;
+    width: 8vw;
+}
+.league-details-main{
+    flex-direction: column;
+}
+
+.league-details-heading {
+    background-color: var(--white);
+    border: 1px solid var(--pale-gray);
+    border-radius: 1em;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 600px;
+    height: auto;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.league-details-heading h2 {
+    color: var(--blue);
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.league-details-heading p {
+    font-size: 1.1em;
+    color: var(--deep-blue);
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+.leave-league-form{
+    padding: 0;
+}
+.league-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1em;
+    background-color: #ffffff;
+}
+
+.league-details-table th,
+.league-details-table td {
+    border: 1px solid #dcdcdc;
+    padding: 12px;
+    text-align: center;
+}
+
+.league-details-table th {
+    background-color: #f0f0f0;
+    color: #333333;
+    font-weight: 600;
+}
+
+.league-details-username,
+.league-details-gameweek,
+.league-details-overall {
+    font-weight: bold;
+    color: #333333;
+}
+
+.league-details-user td {
+    color: #555555;
+}
+
+.team-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-position{
+    color: var(--accent);
+    background: var(--blue);
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
